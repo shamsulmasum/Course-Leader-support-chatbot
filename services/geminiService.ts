@@ -7,30 +7,31 @@ export const getGeminiResponse = async (
   history: Message[],
   knowledgeBase: KnowledgeItem[]
 ): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || "" });
+  // Use the API key from process.env as per requirements
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    return "The system is not configured with an API Key. Please contact the administrator.";
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
   
   const context = knowledgeBase.length > 0 
     ? `\nKNOWLEDGE BASE CONTEXT (OFFICIAL COURSE DOCS):\n${knowledgeBase.map(kb => `--- ${kb.title} ---\n${kb.content}`).join('\n\n')}`
     : '\nNo specific course documentation provided yet.';
 
   const systemInstruction = `
-    You are "CourseAssist AI", the official digital assistant for the Course Leader.
-    Your primary goal is to assist students with repetitive queries regarding:
-    - Course Structure
-    - Module Content/Descriptions
-    - Timetables and Course Timing
-    - Academic Policies mentioned in the docs.
+    You are "CourseAssist AI", the official digital assistant for the Course Leader, Dr Shamsul Masum.
+    Your primary goal is to assist students with queries regarding the Electronic Systems Engineering (Distance Learning) course.
 
-    FALLBACK RULE:
-    If a student asks a question that is NOT covered in the provided Knowledge Base context, or if you are unsure, you MUST politely state that you don't have that specific information. 
-    Then, explicitly ask them to contact the Course Leader: 
-    Dr Shamsul Masum (shamsul.masum@port.ac.uk).
-
-    GUIDELINES:
-    1. Greeting: Always be professional and welcoming.
-    2. Context: Only use the provided Knowledge Base. Do not hallucinate external dates or module details.
-    3. Formatting: Use bullet points for lists of modules or schedules to make it readable for students.
-    4. Conciseness: Keep answers direct and helpful.
+    STRICT RULES:
+    1. SOURCE MATERIAL: Use ONLY the provided Knowledge Base context. 
+    2. CONTACT INFO: If a student needs to reach a real person, refer them to:
+       - Dr Shamsul Masum (Course Leader): shamsul.masum@port.ac.uk
+       - Katie Strong (Course Administrator): katie.strong@port.ac.uk
+    3. FALLBACK: If a question is not answered in the docs (e.g., specific personal grades, or very technical deep-dives not in the syllabus description), say: 
+       "I'm sorry, I don't have that specific information in my current guidebook. Please contact the Course Leader, Dr Shamsul Masum (shamsul.masum@port.ac.uk), for more help."
+    4. ACCREDITATION: If asked about accreditation, clearly state: "This course is not accredited."
+    5. FORMATTING: Use markdown (bolding, lists) to make info easy to read.
 
     CONTEXT:
     ${context}
@@ -50,14 +51,14 @@ export const getGeminiResponse = async (
       ],
       config: {
         systemInstruction: systemInstruction,
-        temperature: 0.3, // Lower temperature for more factual responses
+        temperature: 0.2, // Very factual
         topP: 0.8,
       }
     });
 
-    return response.text || "I'm sorry, I encountered an issue processing your request. Please contact Dr Shamsul Masum at shamsul.masum@port.ac.uk for assistance.";
+    return response.text || "I'm sorry, I couldn't generate a response. Please email Dr Masum.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I am currently having trouble accessing my knowledge files. Please reach out to Dr Shamsul Masum (shamsul.masum@port.ac.uk) for any urgent course inquiries.";
+    return "I am currently having trouble connecting to my brain. Please reach out to Dr Shamsul Masum (shamsul.masum@port.ac.uk) for any urgent course inquiries.";
   }
 };
