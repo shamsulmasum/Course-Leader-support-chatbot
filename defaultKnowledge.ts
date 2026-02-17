@@ -528,7 +528,6 @@ Common questions answered include:
 - Weekly study hours (2–4 hrs lectures + self-study)
 - Exams and time zones
 - Recorded lectures
-- Accreditation status (not accredited)
 - Lab kits (not provided)
 - Individual Project requirements (5,000+ word report)
 - Degree classification (First, 2:1, etc.)
