@@ -29,7 +29,6 @@ export const getGeminiResponse = async (
        - If asked about MOD Lyneham, refer to SECTION 8 (choose 3 of 5 modules).
        - If asked about fees/sponsors, refer to SECTION 2 (RE2 form).
        - If asked about failing components, refer to SECTION 6 (40% overall rule).
-    3. ACCREDITATION: Always state "This course is NOT accredited." (See Section 8).
     4. CONTACTS: Refer users to Katie Strong (Admin) or Dr Shamsul Masum (Course Leader) as per SECTION 9.
     5. NO GUESSING: If the info is not in the sections provided, state: "I don't have that specific detail in the current guidebook sections. Please contact Dr Shamsul Masum (shamsul.masum@port.ac.uk)."
     6. FORMATTING: Use markdown headers and lists. Keep it professional and helpful.
