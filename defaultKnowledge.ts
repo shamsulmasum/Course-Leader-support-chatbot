@@ -19,6 +19,201 @@ Useful portals:
 Forum Preferences: Adjust "Forum Preferences" in Moodle to receive a daily digest instead of individual emails for every post.`,
     source: 'paste'
   },
+  
+{
+    id: 'dl-guidebook-overview',
+    title: 'DL Guidebook 2025–26 Overview',
+    source: 'paste',
+    content: `
+This guidebook provides essential information for Distance Learning (DL) students
+studying Electronic Systems Engineering at the University of Portsmouth.
+
+The official DL Guidebook is available via Moodle:
+https://moodle.port.ac.uk
+
+The guidebook covers registration, Moodle usage, assessments, academic regulations,
+software requirements, student support, and key contacts.
+`
+  },
+
+  {
+    id: 'student-email-communication',
+    title: 'Student Email and Communication',
+    source: 'paste',
+    content: `
+All official University communication is sent to your University of Portsmouth
+student email account.
+
+Email access:
+https://myport.port.ac.uk
+
+Students should use their University email address when contacting staff.
+If you forget your password, IT support guidance is available at:
+https://myport.port.ac.uk/it-support/student-it-support
+`
+  },
+
+  {
+    id: 'registration-process',
+    title: 'Registration Process',
+    source: 'paste',
+    content: `
+Registration is mandatory before accessing course materials.
+
+New students must complete registration online via the Student Portal:
+https://myport.port.ac.uk
+
+Failure to complete registration may result in Withdrawal of Services (WoS),
+including loss of access to Moodle.
+`
+  },
+
+  {
+    id: 'moodle-vle',
+    title: 'Moodle Virtual Learning Environment',
+    source: 'paste',
+    content: `
+Moodle is the University’s Virtual Learning Environment (VLE).
+
+Moodle access:
+https://moodle.port.ac.uk
+
+Students use Moodle to access:
+- Lecture materials
+- Assessments
+- Discussion forums
+- Zoom links (recorded sessions)
+
+If you experience access issues, contact the TEL team:
+elearn@port.ac.uk
+`
+  },
+
+  {
+    id: 'course-structure-modules',
+    title: 'Course Structure and Modules',
+    source: 'paste',
+    content: `
+The BEng (Hons) Electronic Systems Engineering Distance Learning course
+is offered part-time over 2 or 3 years.
+
+Module catalogue:
+https://course-module-catalog.port.ac.uk/#/
+
+Modules include:
+- Electronics (M21495)
+- Data Communication (M21498)
+- Digital Signal Processing (M21497)
+- Foundation of Artificial Intelligence (M33615)
+- Quality Management (M30940)
+- Individual Project (M21499)
+`
+  },
+
+  {
+    id: 'assessments-exams',
+    title: 'Assessments and Exams',
+    source: 'paste',
+    content: `
+Assessment information is provided in each module’s Moodle site.
+
+To pass a module, students must achieve an overall mark of at least 40%.
+
+University Examination & Assessment Regulations:
+http://www.port.ac.uk/assessmentandregulations
+`
+  },
+
+  {
+    id: 'academic-integrity',
+    title: 'Academic Integrity and Plagiarism',
+    source: 'paste',
+    content: `
+Plagiarism and academic misconduct are treated seriously.
+
+The University uses Turnitin to support academic integrity.
+
+Referencing guidance:
+https://library.port.ac.uk/w165.html
+https://www.port.ac.uk/ask
+`
+  },
+
+  {
+    id: 'software-requirements',
+    title: 'Software and Technical Requirements',
+    source: 'paste',
+    content: `
+Common software used on the course includes:
+
+MATLAB (DSP):
+https://matlab.mathworks.com
+
+LTSpice (Electronics):
+https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
+
+AppsAnywhere:
+https://appsanywhere.port.ac.uk
+
+Some software requires access via the University VPN.
+`
+  },
+
+  {
+    id: 'student-support-contacts',
+    title: 'Student Support and Key Contacts',
+    source: 'paste',
+    content: `
+Key contacts:
+
+Course Leader:
+Dr Shamsul Masum
+shamsul.masum@port.ac.uk
+
+Course Administrator:
+Katie Strong
+katie.strong@port.ac.uk
+
+TEC Academic Services Hub:
+tecacademicservices@port.ac.uk
+
+IT Support:
+https://myport.port.ac.uk/it-support/student-it-support/contact-it-support
+`
+  },
+
+  {
+    id: 'top-up-degree-info',
+    title: 'Top-Up Degree Information',
+    source: 'paste',
+    content: `
+Electronic Systems Engineering (Distance Learning) Top-Up BEng (Hons)
+
+Admissions contact:
+admissions@port.ac.uk
+
+Course information:
+https://www.port.ac.uk/study/courses/undergraduate/beng-hons-electronic-systems-engineering-distance-learning-top-up
+
+Note: The distance learning course is not professionally accredited.
+`
+  },
+
+  {
+    id: 'careers-opportunities',
+    title: 'Careers and Opportunities',
+    source: 'paste',
+    content: `
+Graduates progress into roles such as:
+- Electronics Engineer
+- Product Design Engineer
+- Application Engineer
+
+Careers and employability support:
+https://www.port.ac.uk/careers
+`
+  },
+  
   {
     id: "registration-admin",
     title: "2. Registration & Administrative Setup",
@@ -160,5 +355,189 @@ Sponsors Team: sponsors@port.ac.uk
 Income Team: income@port.ac.uk
 IT Support: https://myport.port.ac.uk/it-support/student-it-support`,
     source: 'paste'
-  }
+  },
+
+{
+  id: 'dl-registration-detailed',
+  title: 'Registration: New vs Continuing Students',
+  source: 'paste',
+  content: `
+Registration is mandatory and differs for new and continuing students.
+
+Continuing students:
+- Re-register via Student Portal (MyPort)
+- May apply for a campus card online if needed
+- Uncollected cards for DL students are sent to MyPort Hub and posted
+
+New students:
+- Must complete a 4-step process:
+  1. Receive student account details
+  2. Register for the course
+  3. Submit ID and qualification checks
+  4. Apply for a student card
+
+Delays or failure to register may result in Withdrawal of Services (WoS),
+including loss of Moodle access.
+
+IT Support:
+https://myport.port.ac.uk/it-support/student-it-support
+`
+},
+{
+  id: 'dl-teaching-blocks-and-assessments',
+  title: 'Teaching Blocks, Assessments, and Exam Periods',
+  source: 'paste',
+  content: `
+Each academic year runs September–June and is split into two Teaching Blocks (TB).
+
+Teaching Block 1: Sept/Oct – Jan
+Teaching Block 2: Jan – May/June
+
+Each block ends with an Assessment Period.
+A Referral (Second Attempt) Period follows later in the year.
+
+Students must be available for:
+- Exams during teaching blocks
+- Assessment periods
+- Referral periods
+
+Exam dates cannot be changed for individuals.
+Extenuating Circumstances (EC) claims may apply.
+
+Key dates:
+https://www.port.ac.uk/about-us/key-dates
+`
+},
+{
+  id: 'dl-course-structures',
+  title: 'Course Structures and Intake Variations',
+  source: 'paste',
+  content: `
+Course codes:
+- 2-year part-time: U2177PTD
+- 3-year part-time: U2404PTD
+
+Structures differ for September vs January intake students.
+January intake students may take up to 2.5 years.
+
+Students must check their specific structure in the Module Catalogue:
+https://course-module-catalog.port.ac.uk/#/
+`
+},
+{
+  id: 'dl-module-teams',
+  title: 'Modules and Teaching Teams',
+  source: 'paste',
+  content: `
+Module coordinators:
+
+Electronics (M21495):
+Dr Shamsul Masum – shamsul.masum@port.ac.uk
+Dr Ludovico Ausiello – ludovico.ausiello@port.ac.uk
+
+Data Communication (M21498):
+Dr Salem Aljareh – salem.aljareh@port.ac.uk
+
+Digital Signal Processing (M21497):
+Dr John Chiverton – john.chiverton@port.ac.uk
+
+Foundation of Artificial Intelligence (M33615):
+Dr Hongjie Ma – hongjie.ma@port.ac.uk
+
+Quality Management (M30940):
+Dr Ivan Popov – ivan.popov@port.ac.uk
+
+Individual Project (M21499):
+Dr Shamsul Masum – shamsul.masum@port.ac.uk
+`
+},
+{
+  id: 'dl-academic-integrity-full',
+  title: 'Academic Citizenship, Cheating, and Plagiarism',
+  source: 'paste',
+  content: `
+Academic integrity is fundamental.
+
+Cheating includes:
+- Copying work
+- Collusion
+- Using unauthorised material
+- Purchasing assignments
+
+Plagiarism includes:
+- Copying text, code, diagrams without citation
+- Paraphrasing without attribution
+- Submitting others’ work
+
+TurnitinUK is used to detect plagiarism.
+
+Penalties range from mark reduction to expulsion.
+
+Regulations:
+http://www.port.ac.uk/assessmentandregulations
+
+Referencing guidance:
+https://library.port.ac.uk/w165.html
+http://www.port.ac.uk/ask
+`
+},
+{
+  id: 'dl-assessment-and-progression',
+  title: 'Assessment Rules, Results, and Progression',
+  source: 'paste',
+  content: `
+To pass a module:
+- Overall mark ≥ 40%
+- Not all components must be passed individually
+
+Marks are provisional until confirmed by a Module Assessment Board (MAB).
+
+Possible outcomes:
+- Pass (P)
+- Referred (R)
+- Deferred / EC
+
+Confirmed results appear in the Student Portal.
+Degree classification is based solely on DL modules.
+
+GPA is cosmetic and derived from percentage marks.
+`
+},
+{
+  id: 'dl-difficulties-and-interruptions',
+  title: 'Extenuating Circumstances, Interruption, and Withdrawal',
+  source: 'paste',
+  content: `
+If difficulties arise, contact your Course Leader or Personal Tutor early.
+
+Options include:
+- Extenuating Circumstances (EC)
+- Module interruption
+- Course interruption
+- Withdrawal (fee liability applies)
+
+EC may allow deadline extensions or deferred exams.
+
+Suspensions require Course Leader approval.
+`
+},
+{
+  id: 'dl-applicant-faqs',
+  title: 'Applicant Questions and Official Answers',
+  source: 'paste',
+  content: `
+Common questions answered include:
+- Weekly study hours (2–4 hrs lectures + self-study)
+- Exams and time zones
+- Recorded lectures
+- Accreditation status (not accredited)
+- Lab kits (not provided)
+- Individual Project requirements (5,000+ word report)
+- Degree classification (First, 2:1, etc.)
+
+Admissions contact:
+admissions@port.ac.uk
+`
+}
+  
 ];
