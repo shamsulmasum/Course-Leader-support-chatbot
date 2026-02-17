@@ -3,156 +3,162 @@ import { KnowledgeItem } from './types';
 
 export const defaultKnowledge: KnowledgeItem[] = [
   {
-    id: "complete-guidebook-2025",
-    title: "Complete DL Guidebook & FAQs 2025/26",
-    content: `
-DL Guidebook 2025/26
-Site: Moodle Cloud
-Course: Electronic Systems Engineering DL Courses 
-Book: DL Guidebook 2025/26
-Printed by: Shamsul Masum
-Date: Wednesday, 11 February 2026, 1:52 PM
+    id: "course-overview",
+    title: "1. Welcome & Course Overview",
+    content: `DL Guidebook 2025/26 - Electronic Systems Engineering (Distance Learning)
+Course Leader: Dr Shamsul Masum.
 
-DESCRIPTION
-This guidebook contains information you need to get ready to begin your studies as a distance learning student in the School of Electrical and Mechanical Engineering.
+Welcome to the School of Electrical and Mechanical Engineering. This guidebook is specifically focused on our Distance Learning (DL) courses. Even though you are spread across the world, we want you to feel part of the School.
 
-WELCOME
-Welcome to the School of Electrical and Mechanical Engineering and onto your Distance Learning (DL) course. This guidebook contains useful information you need to get ready to begin your studies. Even though many of you are spread across the world, we want you to feel that you are a part of the School.
+Communication:
+All e-mail communication must be made via your student Microsoft Outlook account (Microsoft.com). Check it frequently. 
+Useful portals:
+- MyPort: Your personalized view of University and Internet resources.
+- MyStudentView: New interface for managing various aspects of your course.
+- MyPort Article Hub: For solving common queries.
+Forum Preferences: Adjust "Forum Preferences" in Moodle to receive a daily digest instead of individual emails for every post.`,
+    source: 'paste'
+  },
+  {
+    id: "registration-admin",
+    title: "2. Registration & Administrative Setup",
+    content: `REGISTRATION PROCESS
+Continuing Students: Re-register via Student Portal. ID cards are sent to MyPort Hub for mailing (timescales vary).
+New Students (4-Step Process):
+Step 1: Get student account details.
+Step 2: Register for your course.
+Step 3: Submit personal identification (ID) and course entry qualification check.
+Step 4: Apply for student card.
 
-STUDENT MICROSOFT OUTLOOK MAIL ACCOUNT
-All e-mail communication should be made to and from your student mail account (Microsoft.com). Check it frequently. Use this address for all University communication.
-Password reset: https://myport.port.ac.uk/it-support/student-it-support
+Course Administrator: Katie Strong (katie.strong@port.ac.uk | +44 (0)23 9284 6271). Katie supports a large number of courses; always include your student ID in any email.
+IT Support: Use the "Student IT Support" link for self-service or raise concerns via Hornbill.
+TEC Academic Services Hub: tecacademicservices@port.ac.uk | +44 (0) 23 9284 6871.`,
+    source: 'paste'
+  },
+  {
+    id: "course-structure-dates",
+    title: "3. Course Structure & Key Dates",
+    content: `ACADEMIC YEAR STRUCTURE
+Two Teaching Blocks: TB1 (Sept/Oct to Jan) and TB2 (Jan to May/June).
+Referral Period: Late summer for re-assessments.
 
-MOODLE DISCUSSION FORUMS
-Adjust forum preferences in the top right menu ("Preferences" -> "Forum Preferences") to receive one daily digest email instead of separate emails for every post.
+2-YEAR PART-TIME (U2177PTD)
+September Intake:
+- Year 1: Electronics (TB1), Data Comm (TB2), DSP (TB2).
+- Year 2: AI (TB1), Quality Management (TB1), Project (TB2).
+January Intake:
+- Year 1: DSP (TB2).
+- Year 2: AI (TB1), Quality Management (TB1), Data Comm (TB2).
+- Year 3: Electronics (TB1), Project (TB2).
 
-INFORMATION SOURCES
-- MyPort: Personalised view of University resources.
-- MyStudentView: Interface for managing course aspects.
-- MyPort Article Hub: Search for common queries.
+3-YEAR PART-TIME (U2404PTD)
+September Intake:
+- Year 1: Electronics (TB1), Data Comm (TB2).
+- Year 2: Quality Management (TB1), DSP (TB2).
+- Year 3: AI (TB1), Project (TB2).
+January Intake:
+- Year 1: DSP (TB2).
+- Year 2: Quality Management (TB1), AI (TB1), Data Comm (TB2).
+- Year 3: Electronics (TB1), Project (TB2).`,
+    source: 'paste'
+  },
+  {
+    id: "module-catalogue",
+    title: "4. Module Descriptions & Coordinators",
+    content: `MODULE DETAILS
+- Electronics (M21495): Dr Shamsul Masum & Dr Ludo Ausiello. Focuses on VHDL and Measurement systems.
+- Data Communication (M21498): Dr Salem Aljareh.
+- Digital Signal Processing (M21497): Dr John Chiverton.
+- Foundation of Artificial Intelligence (M33615): Dr Hongjie Ma. Recommended language: Python.
+- Quality Management (M30940): Dr Ivan Popov. Uses MS Excel.
+- Individual Project (M21499): Dr Shamsul Masum. Requires research proposal and 5,000-word report.
 
-REGISTRATION
-Registration is urgent and important.
-Continuing Students: Re-register via Student Portal. Campus cards for DL students are sent to MyPort Hub and mailed out, though timescales vary.
-New Students: 4-step process:
-Step 1: Get student account details
-Step 2: Register for your course
-Step 3: Submit ID and course entry qualification check
-Step 4: Apply for student card
+Use the M-code (e.g., 21495) to search the University Module Catalogue for full syllabus details.`,
+    source: 'paste'
+  },
+  {
+    id: "software-guide",
+    title: "5. Software Requirements & Access",
+    content: `SOFTWARE BY MODULE
+M21495 Electronics: EDA Playground (online VHDL), LTSpice (available via AppsAnywhere or local install).
+M33615 AI: Python (Jupyter, VS Code, JetBrains).
+M21497 DSP: Matlab + DSP Toolbox. 
+- Local Install: Download via Mathworks account using UoP email.
+- AppsAnywhere: Run virtualized Windows version (requires VPN if off-campus).
+- Remote Access: Connect to University lab computers remotely.
+- Online: matlab.mathworks.com.
+M30940 Quality Management: MS Excel.
 
-COURSE ADMINISTRATOR
-Katie Strong: katie.strong@port.ac.uk | +44 (0)23 9284 6271. 
-Note: Katie supports many courses. Always include your student ID number in emails.
-
-SUPPORT
-IT Support: https://myport.port.ac.uk/it-support/student-it-support (Use self-service/Hornbill).
-TEC Academic Services Hub: tecacademicservices@port.ac.uk | +44 (0) 23 9284 6871.
-Course Leader: Dr Shamsul Masum | shamsul.masum@port.ac.uk | +44 (0)23 9284 2311.
-Personal Tutor: Check Student Portal for your allocated tutor.
-
-COURSE DATES
-Academic Year: Sept to June, split into Teaching Block 1 (Sept/Oct to Jan) and Teaching Block 2 (Jan to May/June). 
-Assessment Periods: At the end of each Teaching Block.
-Referral Assessment Period: Re-assessment opportunity for failed modules.
-Exam Dates: Fixed once set. Some are specific start times, some are "windows of opportunity" (e.g., 3-hour window for a 90-min test).
-Graduation: Typically July. Certificates/transcripts sent during/after summer.
-
-COURSE STRUCTURE (BEng Hons Electronic Systems Engineering)
-Part-time over 2 Years (U2177PTD) - September Intake:
-Year 1: TB1: Electronics (M21495) | TB2: Data Communication (M21498), DSP (M21497)
-Year 2: TB1: AI (M33615), Quality Management (M30940) | TB2: Individual Project (M21499)
-
-Part-time over 2 Years (U2177PTD) - January Intake:
-Year 1: TB2: DSP (M21497)
-Year 2: TB1: AI (M33615), Quality Management (M30940) | TB2: Data Communication (M21498)
-Year 3: TB1: Electronics (M21495) | TB2: Individual Project (M21499)
-
-Part-time over 3 Years (U2404PTD) - September Intake:
-Year 1: TB1: Electronics (M21495) | TB2: Data Communication (M21498)
-Year 2: TB1: Quality Management (M30940) | TB2: DSP (M21497)
-Year 3: TB1: AI (M33615) | TB2: Individual Project (M21499)
-
-Part-time over 3 Years (U2404PTD) - January Intake:
-Year 1: TB2: DSP (M21497)
-Year 2: TB1: Quality Management (M30940), AI (M33615) | TB2: Data Communication (M21498)
-Year 3: TB1: Electronics (M21495) | TB2: Individual Project (M21499)
-
-MODULE COORDINATORS
-Electronics (M21495): Dr Shamsul Masum & Dr Ludovico Ausiello.
-Data Communication (M21498): Dr Salem Aljareh.
-DSP (M21497): Dr John Chiverton.
-AI (M33615): Dr Hongjie Ma.
-Quality Management (M30940): Dr Ivan Popov.
-Individual Project (M21499): Dr Shamsul Masum.
-
-TUITION FEES
-Managed via MyStudentView. Sponsored students must request an RE2 form for their employer. ELCAS scheme also requires this. Failure to meet registration/fee conditions can lead to Withdrawal of Services (WoS).
-
-MOODLE & TIMETABLE
-Modules appear on Dashboard after registration (takes ~1 day).
-Module Visibility: TB1 modules visible in Sept; TB2 modules stay hidden until later.
-Timetable: DL does not use the central Uni timetable. Lectures are via Zoom, arranged by lecturers, and recorded for later viewing.
-
-LIBRARY & TEXTBOOKS
-Reading lists found on Moodle or at https://library.port.ac.uk/10342.
-Online Library: Access via VPN. 
-SCONUL Access: DL students can use/borrow from other UK/Ireland Uni libraries.
-
-SOFTWARE
-Electronics (M21495): EDA Playground (online VHDL), LTSpice (Windows/MacOS/AppsAnywhere).
-AI (M33615): Python (Jupyter, VS Code, JetBrains).
-DSP (M21497): Matlab + DSP Toolbox. Install local copy via AppsAnywhere/Mathworks account using Uni email.
-Quality Management (M30940): MS Excel.
 AppsAnywhere: https://appsanywhere.port.ac.uk/
+VPN: Required for some library resources and AppsAnywhere.`,
+    source: 'paste'
+  },
+  {
+    id: "assessments-regulations",
+    title: "6. Assessments, Grading & Plagiarism",
+    content: `ASSESSMENT STRATEGY
+Pass mark: 40% overall for the module. You can pass a module even if you fail one component (e.g., 60% CW + 30% Exam = 45% PASS).
+Late Submission: Max mark 40% if submitted within 10 working days, unless you have valid EC.
 
 ACADEMIC CITIZENSHIP
-Academic integrity is vital. Cheating includes bringing unauthorized info to exams or copying work. Plagiarism is 'literary theft'. TurnitinUK checks all submissions. Proven plagiarism can lead to a mark of 0 or expulsion.
+Plagiarism: Presenting others' work as your own. Includes copying code, paraphrasing without citation, or collusion.
+TurnitinUK: Used to check all submissions against web pages and other students' work.
+Penalties: Can range from mark reduction to expulsion.
 
-ASSESSMENTS
-Pass mark: 40% overall module mark. You don't need to pass every component to pass the module (e.g., 60% CW + 30% Exam = 45% Total = PASS).
-Deadlines: Coursework due at specific UK time. Timed assessments (tests) have specific windows.
-Late Submission: Max 40% mark if within 10 working days, unless EC claim is valid.
+Results: 
+- 70%+ (First/Grade A)
+- 60-69% (2:1/Grade B)
+- 50-59% (2:2/Grade C)
+- 40-49% (3rd/Grade D)
+Marks are provisional until confirmed by the MAB (June/July).`,
+    source: 'paste'
+  },
+  {
+    id: "student-support",
+    title: "7. Support, EC & Difficulties",
+    content: `ENCOUNTERING DIFFICULTIES
+Extenuating Circumstances (EC): For short-term serious issues (health/personal). Successful claims allow +10 days for CW or a deferred exam attempt.
+Interruption of Studies:
+- Module Interruption: Stop one module.
+- Course Interruption: Suspend the whole course.
+Requires Course Leader approval.
 
-RESULTS & PROGRESSION
-Provisional marks are confirmed by Module Assessment Boards (MAB) in June/July.
-Grades: 40-49% (3rd/Grade D), 50-59% (2:2/Grade C), 60-69% (2:1/Grade B), 70%+ (1st/Grade A).
-Referred (R): If overall mark < 40%. Requires re-assessment in failed parts.
-Deferred (EC): If assessment missed due to valid EC.
-Board of Examiners (BoE): Meets in July to decide progression or degree award.
-
-DIFFICULTIES
-Extenuating Circumstances (EC): For short-term health/personal issues. Success allows +10 working days for CW or a later exam date.
-Interruption: Module interruption vs Course interruption. Needs Course Leader approval.
-Withdrawal: Full exit from course. Fee liability depends on date.
-
-USEFUL CONTACTS
-Course Leader - Dr. Shamsul Masum: shamsul.masum@port.ac.uk | +44 (0) 23 9284 2311
-Course Admin - Katie Strong: katie.strong@port.ac.uk | +44 (0) 23 9284 5853
-Graduation: graduation@port.ac.uk | +44 (0) 23 9284 3434
+Personal Tutor: Named staff member for pastoral support. Find details on Student Portal.
+ASDAC: For students requiring additional support due to disabilities or learning needs.`,
+    source: 'paste'
+  },
+  {
+    id: "applicant-faqs",
+    title: "8. Common FAQs for Applicants",
+    content: `Q1: Study time?
+A1: 2-4 hours online teaching + 3-5 hours self-study per module, per week.
+Q2: Dissertation?
+A2: Individual Project (M21499) concludes with a 5,000-word written report.
+Q3: Internet at sea?
+A3: Lectures are recorded and downloadable. EC forms can cover missed deadlines due to connectivity issues.
+Q4: Accreditation?
+A4: This course is NOT accredited.
+Q5: International Time Zones (e.g. Texas)?
+A5: Sessions recorded. Exams are online.
+Q6: Lab kits?
+A6: Not provided. We use online software. Project hardware must be student-funded.
+Q7: MOD Lyneham students?
+A7: Select 3 out of 5 modules. Project module is excluded.
+Q8: Entry requirements?
+A8: Relevant Level 5 qualification (HND/Foundation Degree) + IELTS 6.0 (no component < 5.5).`,
+    source: 'paste'
+  },
+  {
+    id: "contact-directory",
+    title: "9. Useful Contacts Directory",
+    content: `Course Leader: Dr Shamsul Masum (shamsul.masum@port.ac.uk | +44 (0)23 9284 2311)
+Course Admin: Katie Strong (katie.strong@port.ac.uk | +44 (0)23 9284 6271)
+TEC Academic Services: tecacademicservices@port.ac.uk | +44 (0) 23 9284 6871
+Graduation Team: graduation@port.ac.uk | +44 (0) 23 9284 3434
 Tuition Fees: tuition.fees@port.ac.uk | +44 (0)23 9284 5259
-
-GENERAL QUESTIONS FROM APPLICANTS (FAQs)
-Q1: Study hours for 2-year part-time route?
-A1: Each module has 2–4 hours online teaching per week. Total commitment depends on 2-yr vs 3-yr route. Each block is 10 weeks + 2 assessment weeks.
-Q2: Dissertation/Project details?
-A2: Individual Project (M21499) requires a research proposal, an allocated supervisor, and a written report of at least 5,000 words.
-Q3: Working at sea/Reliable internet?
-A3: Lectures are recorded and downloadable. If internet issues cause missed deadlines, students can submit an Extenuating Circumstances Form (ECF).
-Q4: Course Accreditation?
-A4: This course is NOT accredited. It is common for online engineering courses to lack accreditation due to rigorous requirements.
-Q5: UK citizen in US (Texas -6h time difference)?
-A5: Lectures recorded. Exams conducted online. Study time for 3-yr route: 2 hours lecture + 3-5 hours self-study per module per week. 2-yr route involves 3 modules per year.
-Q6: Lab kits and hardware?
-A7: For modules, we use online software. For the Individual Project, any hardware required must be arranged and funded by the student.
-Q7: Assessment format?
-A7: Mixture of time-bound exams and coursework assignments.
-Q8: MOD Lyneham students / RPL?
-A8: MOD Lyneham students in the collaboration select 3 out of 5 modules. The Project module is NOT available for selection. Modules: Electronics (M21495), Quality Management (M30940), AI (M33615) in TB1; DSP (M21497), Data Communications (M21498) in TB2.
-
-SEPTEMBER VS JANUARY INTAKE
-September start: Year 1 TB1 is Electronics (M21495).
-January start: Year 1 TB2 is DSP (M21497).
-`,
+Sponsors Team: sponsors@port.ac.uk
+Income Team: income@port.ac.uk
+IT Support: https://myport.port.ac.uk/it-support/student-it-support`,
     source: 'paste'
   }
 ];

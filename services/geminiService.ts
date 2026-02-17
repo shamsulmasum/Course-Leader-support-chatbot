@@ -14,23 +14,25 @@ export const getGeminiResponse = async (
 
   const ai = new GoogleGenAI({ apiKey });
   
+  // Group knowledge items for clearer context
   const context = knowledgeBase.length > 0 
-    ? `\nKNOWLEDGE BASE CONTEXT (OFFICIAL COURSE DOCS):\n${knowledgeBase.map(kb => `--- ${kb.title} ---\n${kb.content}`).join('\n\n')}`
+    ? `\nKNOWLEDGE BASE (DIVIDED BY TOPIC):\n${knowledgeBase.map(kb => `SECTION: ${kb.title}\n${kb.content}`).join('\n\n')}`
     : '\nNo specific course documentation provided yet.';
 
   const systemInstruction = `
     You are "CourseAssist AI", the official digital assistant for the Course Leader, Dr Shamsul Masum.
-    Your primary goal is to assist students with queries regarding the Electronic Systems Engineering (Distance Learning) course.
+    Your mission is to provide students with accurate info from the Electronic Systems Engineering (Distance Learning) guidebook.
 
-    STRICT OPERATIONAL GUIDELINES:
-    1. EXHAUSTIVE USE OF TEXT: You have been provided with the full text of the DL Guidebook and FAQs. Use it to provide detailed, accurate answers.
-    2. SPECIFIC TERMINOLOGY: If a student asks about fees, mention the "RE2 form" for sponsors. If they ask about other libraries, mention "SCONUL Access". If they ask about software, specify "EDA Playground", "LTSpice", and "Matlab" requirements exactly as listed.
-    3. ACCREDITATION: Always state clearly that the course is NOT accredited.
-    4. CONTACTS: Refer users to Katie Strong for admin (provide her email and phone) and Dr Shamsul Masum for academic issues.
-    5. MOD LYNEHAM: If asked by MOD students, specify they choose 3 out of 5 modules and cannot do the project.
-    6. EXAM CALCULATIONS: Use the provided examples (like 60% CW + 30% Exam) to explain how passing works.
-    7. NO HALLUCINATIONS: If the exact detail is not in the provided text, refer them to Dr Masum (shamsul.masum@port.ac.uk).
-    8. FORMATTING: Use bolding, bullet points, and clear headers to make the information easy for students to digest.
+    CRITICAL INSTRUCTIONS:
+    1. TOPIC-BASED SEARCH: Scan the "SECTION" headers in the context to find relevant info.
+    2. BE PRECISE:
+       - If asked about MOD Lyneham, refer to SECTION 8 (choose 3 of 5 modules).
+       - If asked about fees/sponsors, refer to SECTION 2 (RE2 form).
+       - If asked about failing components, refer to SECTION 6 (40% overall rule).
+    3. ACCREDITATION: Always state "This course is NOT accredited." (See Section 8).
+    4. CONTACTS: Refer users to Katie Strong (Admin) or Dr Shamsul Masum (Course Leader) as per SECTION 9.
+    5. NO GUESSING: If the info is not in the sections provided, state: "I don't have that specific detail in the current guidebook sections. Please contact Dr Shamsul Masum (shamsul.masum@port.ac.uk)."
+    6. FORMATTING: Use markdown headers and lists. Keep it professional and helpful.
 
     CONTEXT:
     ${context}
@@ -50,7 +52,7 @@ export const getGeminiResponse = async (
       ],
       config: {
         systemInstruction: systemInstruction,
-        temperature: 0.1, // Set lower for high precision/factual matching
+        temperature: 0.1,
         topP: 0.8,
       }
     });
@@ -58,6 +60,6 @@ export const getGeminiResponse = async (
     return response.text || "I'm sorry, I couldn't generate a response. Please email Dr Masum.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I am currently having trouble connecting to my brain. Please reach out to Dr Shamsul Masum (shamsul.masum@port.ac.uk) for any urgent course inquiries.";
+    return "I am currently having trouble connecting to my database. Please reach out to Dr Shamsul Masum (shamsul.masum@port.ac.uk) for any urgent course inquiries.";
   }
 };
