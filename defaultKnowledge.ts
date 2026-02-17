@@ -194,8 +194,6 @@ admissions@port.ac.uk
 
 Course information:
 https://www.port.ac.uk/study/courses/undergraduate/beng-hons-electronic-systems-engineering-distance-learning-top-up
-
-Note: The distance learning course is not professionally accredited.
 `
   },
 
