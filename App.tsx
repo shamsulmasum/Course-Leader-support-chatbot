@@ -4,26 +4,32 @@ import Header from './components/Header';
 import ChatInterface from './components/ChatInterface';
 import KnowledgeManager from './components/KnowledgeManager';
 import { AppState, Message, KnowledgeItem } from './types';
+import { defaultKnowledge } from './defaultKnowledge';
 
 const STORAGE_KEY = 'course_assist_knowledge_base';
 
 const App: React.FC = () => {
-  const [isAdminMode, setIsAdminMode] = useState(false);
+  const [isAdminUrl, setIsAdminUrl] = useState(false);
 
   useEffect(() => {
-    // Check if the URL has ?admin=true to show the admin toggle
     const params = new URLSearchParams(window.location.search);
-    setIsAdminMode(params.get('admin') === 'true');
+    setIsAdminUrl(params.get('admin') === 'true');
   }, []);
 
   const [state, setState] = useState<AppState>(() => {
     const savedKnowledge = localStorage.getItem(STORAGE_KEY);
-    const initialKnowledge = savedKnowledge ? JSON.parse(savedKnowledge) : [];
+    // 1. Use saved storage if exists (Admin override)
+    // 2. Otherwise use the "hardcoded" defaultKnowledge (for Students)
+    // 3. Otherwise empty array
+    const initialKnowledge = savedKnowledge 
+      ? JSON.parse(savedKnowledge) 
+      : (defaultKnowledge.length > 0 ? defaultKnowledge : []);
     
     return {
       messages: [],
       knowledgeBase: initialKnowledge,
-      // If we have data and we aren't explicitly an admin, start in Chat mode
+      // If we have NO knowledge at all, we MUST configure.
+      // If we HAVE knowledge, only enter config mode if the admin URL is present.
       isConfiguring: initialKnowledge.length === 0,
       isLoading: false,
     };
@@ -48,10 +54,11 @@ const App: React.FC = () => {
   };
 
   const handleClearAllKnowledge = () => {
-    if (window.confirm("Are you sure you want to clear all course data?")) {
+    if (window.confirm("Are you sure you want to clear all course data? This will revert to default embedded docs.")) {
+      localStorage.removeItem(STORAGE_KEY);
       setState(prev => ({
         ...prev,
-        knowledgeBase: []
+        knowledgeBase: defaultKnowledge
       }));
     }
   };
@@ -72,7 +79,7 @@ const App: React.FC = () => {
       <Header 
         isConfiguring={state.isConfiguring} 
         onToggleMode={toggleMode}
-        showAdminToggle={isAdminMode}
+        showAdminToggle={isAdminUrl}
       />
       
       <main className="flex-1 overflow-hidden">
