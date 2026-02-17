@@ -1,0 +1,5 @@
+{
+  "name": "CourseAssist AI",
+  "description": "A specialized AI chatbot designed for course leaders to automate responses to student inquiries about course structure, modules, and schedules using uploaded course documentation.",
+  "requestFramePermissions": []
+}
